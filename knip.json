@@ -1,0 +1,51 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "ignoreBinaries": ["gitleaks"],
+  "workspaces": {
+    "apps/auth": {
+      "entry": ["src/main.ts", "src/auth.e2e-spec.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "apps/executor": {
+      "entry": ["src/main.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "apps/jobs": {
+      "entry": ["src/main.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "apps/products": {
+      "entry": ["src/main.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/common": {
+      "entry": ["src/index.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/database": {
+      "entry": [
+        "src/index.ts",
+        "src/postgres.integration-spec.ts",
+        "src/schema/index.ts"
+      ],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/graphql": {
+      "entry": ["src/index.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/grpc": {
+      "entry": ["src/index.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/logging": {
+      "entry": ["src/index.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "libs/pulsar": {
+      "entry": ["src/index.ts"],
+      "project": ["src/**/*.ts"]
+    }
+  },
+  "ignoreDependencies": ["@nx/nest", "@nx/node", "nx"]
+}

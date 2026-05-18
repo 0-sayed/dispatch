@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "common",
+  "projectType": "library",
+  "root": "libs/common",
+  "sourceRoot": "libs/common/src",
+  "tags": ["scope:shared", "type:lib"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "libs/common/src/index.ts",
+        "outputPath": "dist/libs/common",
+        "tsConfig": "libs/common/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

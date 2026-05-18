@@ -41,3 +41,5 @@ uploads/
 .wtc/
 .worktrees/
 worktrees/
+.nx/cache
+.nx/workspace-data

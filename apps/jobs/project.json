@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "jobs",
+  "projectType": "application",
+  "root": "apps/jobs",
+  "sourceRoot": "apps/jobs/src",
+  "tags": ["scope:jobs", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "apps/jobs/src/main.ts",
+        "outputPath": "dist/apps/jobs",
+        "tsConfig": "apps/jobs/tsconfig.app.json",
+        "assets": []
+      }
+    }
+  }
+}
