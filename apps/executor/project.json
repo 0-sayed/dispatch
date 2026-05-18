@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "executor",
+  "projectType": "application",
+  "root": "apps/executor",
+  "sourceRoot": "apps/executor/src",
+  "tags": ["scope:executor", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "apps/executor/src/main.ts",
+        "outputPath": "dist/apps/executor",
+        "tsConfig": "apps/executor/tsconfig.app.json",
+        "assets": []
+      }
+    }
+  }
+}

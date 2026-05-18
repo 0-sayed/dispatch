@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "auth",
+  "projectType": "application",
+  "root": "apps/auth",
+  "sourceRoot": "apps/auth/src",
+  "tags": ["scope:auth", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "apps/auth/src/main.ts",
+        "outputPath": "dist/apps/auth",
+        "tsConfig": "apps/auth/tsconfig.app.json",
+        "assets": []
+      }
+    }
+  }
+}

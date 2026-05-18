@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "products",
+  "projectType": "application",
+  "root": "apps/products",
+  "sourceRoot": "apps/products/src",
+  "tags": ["scope:products", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "apps/products/src/main.ts",
+        "outputPath": "dist/apps/products",
+        "tsConfig": "apps/products/tsconfig.app.json",
+        "assets": []
+      }
+    }
+  }
+}

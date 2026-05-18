@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "pulsar",
+  "projectType": "library",
+  "root": "libs/pulsar",
+  "sourceRoot": "libs/pulsar/src",
+  "tags": ["scope:shared", "type:lib"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "main": "libs/pulsar/src/index.ts",
+        "outputPath": "dist/libs/pulsar",
+        "tsConfig": "libs/pulsar/tsconfig.lib.json",
+        "assets": []
+      }
+    }
+  }
+}

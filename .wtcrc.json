@@ -1,0 +1,11 @@
+{
+  "sync": ["docker-compose.yml", ".env.example", "docker/postgres/init"],
+  "envOverrides": {
+    "DATABASE_URL": "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/dispatch",
+    "AUTH_DATABASE_URL": "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/dispatch_auth",
+    "JOBS_DATABASE_URL": "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/dispatch_jobs",
+    "PRODUCTS_DATABASE_URL": "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/dispatch_products",
+    "PULSAR_SERVICE_URL": "pulsar://localhost:${PULSAR_PORT}",
+    "PULSAR_ADMIN_URL": "http://localhost:${PULSAR_ADMIN_PORT}"
+  }
+}
