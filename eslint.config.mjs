@@ -25,7 +25,12 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.spec.ts', '**/*.test.ts', '**/*.e2e-spec.ts'],
+    files: [
+      '**/*.spec.ts',
+      '**/*.test.ts',
+      '**/*.integration-spec.ts',
+      '**/*.e2e-spec.ts',
+    ],
     rules: {
       '@typescript-eslint/no-unsafe-argument': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',

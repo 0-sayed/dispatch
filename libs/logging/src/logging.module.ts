@@ -15,11 +15,15 @@ function readCorrelationId(request: IncomingMessage): string {
   const header = request.headers[CORRELATION_ID_HEADER];
 
   if (typeof header === 'string' && header.trim().length > 0) {
-    return header;
+    return header.trim();
   }
 
-  if (Array.isArray(header) && typeof header[0] === 'string') {
-    return header[0];
+  if (
+    Array.isArray(header) &&
+    typeof header[0] === 'string' &&
+    header[0].trim().length > 0
+  ) {
+    return header[0].trim();
   }
 
   return randomUUID();

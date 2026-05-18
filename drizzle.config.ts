@@ -9,6 +9,6 @@ export default defineConfig({
   dbCredentials: {
     url:
       process.env.DATABASE_URL ??
-      'postgres://dispatch:dispatch@localhost:15432/dispatch',
+      'postgres://dispatch:changeme@localhost:15432/dispatch',
   },
 });
